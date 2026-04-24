@@ -36,7 +36,7 @@ export const Route = createRootRoute({
       { property: "og:description", content: "For founders who are great at the business, but don't have time for the internet. Monthly retainer from $1,195/month." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@Sprrintly" },
     ],
     links: [
       {
