@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import heroBg from "@/assets/hero-bg.jpg";
 import {
   ArrowRight,
   Check,
@@ -55,10 +56,9 @@ function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden text-white"
+      className="relative overflow-hidden text-white bg-cover bg-center"
       style={{
-        background:
-          "radial-gradient(70% 60% at 85% 35%, oklch(0.55 0.22 290 / 0.85) 0%, transparent 60%), radial-gradient(60% 55% at 15% 60%, oklch(0.45 0.20 280 / 0.7) 0%, transparent 65%), radial-gradient(50% 45% at 95% 75%, oklch(0.6 0.18 250 / 0.55) 0%, transparent 60%), linear-gradient(180deg, oklch(0.14 0.03 280) 0%, oklch(0.10 0.02 280) 100%)",
+        backgroundImage: `url(${heroBg})`,
       }}
     >
       {/* Grid overlay */}
