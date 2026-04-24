@@ -56,7 +56,7 @@ function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden text-white bg-cover bg-center"
+      className="relative overflow-hidden text-white bg-cover bg-center min-h-screen flex flex-col"
       style={{
         backgroundImage: `url(${heroBg})`,
       }}
