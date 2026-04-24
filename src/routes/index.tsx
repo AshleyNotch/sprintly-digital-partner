@@ -61,18 +61,6 @@ function Hero() {
         backgroundImage: `url(${heroBg})`,
       }}
     >
-      {/* Grid overlay */}
-      <div
-        aria-hidden
-        className="absolute inset-0 opacity-[0.10] pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-          maskImage:
-            "radial-gradient(ellipse at center, black 50%, transparent 90%)",
-        }}
-      />
 
       {/* Inner nav */}
       <div className="relative mx-auto max-w-7xl flex items-center justify-between px-6 md:px-10 pt-6">
