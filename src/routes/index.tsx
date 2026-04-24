@@ -53,99 +53,83 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="px-4 pt-6 sm:px-0 py-0">
+    <section
+      id="top"
+      className="relative overflow-hidden text-white"
+      style={{
+        background:
+          "radial-gradient(70% 60% at 85% 35%, oklch(0.55 0.22 290 / 0.85) 0%, transparent 60%), radial-gradient(60% 55% at 15% 60%, oklch(0.45 0.20 280 / 0.7) 0%, transparent 65%), radial-gradient(50% 45% at 95% 75%, oklch(0.6 0.18 250 / 0.55) 0%, transparent 60%), linear-gradient(180deg, oklch(0.14 0.03 280) 0%, oklch(0.10 0.02 280) 100%)",
+      }}
+    >
+      {/* Grid overlay */}
       <div
-        className="relative overflow-hidden rounded-[28px] md:rounded-[36px] mx-auto max-w-7xl text-white"
+        aria-hidden
+        className="absolute inset-0 opacity-[0.10] pointer-events-none"
         style={{
-          background:
-            "radial-gradient(120% 80% at 85% 10%, oklch(0.55 0.18 30 / 0.55) 0%, transparent 55%), radial-gradient(90% 70% at 15% 20%, oklch(0.45 0.16 40 / 0.45) 0%, transparent 60%), linear-gradient(180deg, oklch(0.22 0.025 50) 0%, oklch(0.16 0.02 50) 100%)",
+          backgroundImage:
+            "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+          maskImage:
+            "radial-gradient(ellipse at center, black 50%, transparent 90%)",
         }}
-      >
-        {/* Subtle grid overlay */}
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-[0.07] pointer-events-none"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-            backgroundSize: "56px 56px",
-            maskImage:
-              "radial-gradient(ellipse at center, black 40%, transparent 85%)",
-          }}
-        />
+      />
 
-        {/* Inner nav */}
-        <div className="relative flex items-center justify-between px-6 md:px-10 pt-6">
-          <div className="flex items-center gap-2">
-            <span className="h-7 w-7 rounded-lg bg-white/10 grid place-items-center text-white text-sm font-semibold backdrop-blur">
-              S
-            </span>
-            <span className="text-lg font-semibold tracking-tight">Sprrintly</span>
-          </div>
-          <nav className="hidden md:flex items-center gap-8 text-sm text-white/70">
-            <a href="#included" className="hover:text-white transition">What's included</a>
-            <a href="#how" className="hover:text-white transition">How it works</a>
-            <a href="#pricing" className="hover:text-white transition">Pricing</a>
-            <a href="#fit" className="hover:text-white transition">Who it's for</a>
-          </nav>
-          <a
-            href={BOOK_URL}
-            className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 backdrop-blur px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition"
-          >
-            Book a call <ArrowRight className="h-3.5 w-3.5" />
-          </a>
+      {/* Inner nav */}
+      <div className="relative mx-auto max-w-7xl flex items-center justify-between px-6 md:px-10 pt-6">
+        <div className="flex items-center gap-2">
+          <span className="h-7 w-7 rounded-lg bg-white/10 grid place-items-center text-white text-sm font-semibold backdrop-blur">
+            S
+          </span>
+          <span className="text-lg font-semibold tracking-tight">Sprrintly</span>
+        </div>
+        <nav className="hidden md:flex items-center gap-8 text-sm text-white/70">
+          <a href="#included" className="hover:text-white transition">What's included</a>
+          <a href="#how" className="hover:text-white transition">How it works</a>
+          <a href="#pricing" className="hover:text-white transition">Pricing</a>
+          <a href="#fit" className="hover:text-white transition">Who it's for</a>
+        </nav>
+        <a
+          href={BOOK_URL}
+          className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 backdrop-blur px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition"
+        >
+          Book a call <ArrowRight className="h-3.5 w-3.5" />
+        </a>
+      </div>
+
+      {/* Hero content */}
+      <div className="relative mx-auto max-w-5xl px-6 md:px-10 pt-24 md:pt-32 pb-24 md:pb-36 flex flex-col items-center text-center">
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur px-4 py-1.5 text-xs md:text-sm text-white/80">
+          <Sparkles className="h-3.5 w-3.5" />
+          <span>Welcome to Sprrintly</span>
         </div>
 
-        {/* Hero content */}
-        <div className="relative px-6 md:px-10 pt-16 md:pt-24 pb-16 md:pb-20 flex flex-col items-center text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur px-4 py-1.5 text-xs md:text-sm text-white/80">
-            <Sparkles className="h-3.5 w-3.5" />
-            <span>Welcome to Sprrintly</span>
-          </div>
+        <h1 className="mt-8 max-w-4xl text-4xl md:text-6xl lg:text-[68px] font-semibold tracking-tight leading-[1.05]">
+          For founders who are great at the business, but don't have time for the internet.
+        </h1>
 
-          <h1 className="mt-8 max-w-4xl text-4xl md:text-6xl lg:text-[64px] font-semibold tracking-tight leading-[1.05]">
-            For founders who are great at the business, but don't have time for the internet.
-          </h1>
+        <p className="mt-6 max-w-2xl text-base md:text-lg text-white/70 leading-relaxed">
+          Sprrintly is your monthly digital partner. I help owner-led businesses improve their
+          website, sharpen their online presence, build better funnels, and keep the important
+          digital work moving — without you having to hire a full team.
+        </p>
 
-          <p className="mt-6 max-w-2xl text-base md:text-lg text-white/70 leading-relaxed">
-            Sprrintly is your monthly digital partner. I help owner-led businesses improve their
-            website, sharpen their online presence, build better funnels, and keep the important
-            digital work moving — without you having to hire a full team.
-          </p>
-
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <a
-              href={BOOK_URL}
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white shadow-lg transition hover:opacity-90"
-              style={{
-                background:
-                  "linear-gradient(135deg, oklch(0.65 0.18 35), oklch(0.55 0.16 30))",
-              }}
-            >
-              Book a fit call <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href={INCLUDED_URL}
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur px-6 py-3 text-sm font-medium text-white hover:bg-white/10 transition"
-            >
-              See what's included
-            </a>
-          </div>
-
-          {/* Bottom strip */}
-          <div className="mt-16 md:mt-20 w-full border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-left">
-            <div>
-              <p className="text-2xl md:text-3xl font-semibold">From $1,195<span className="text-white/50 text-base font-normal">/month</span></p>
-              <p className="text-xs md:text-sm text-white/60 mt-1">On a 3-month commitment · or $1,495 month-to-month</p>
-            </div>
-            <div className="hidden md:flex items-center gap-8 text-white/70 text-sm">
-              <span>One trusted partner</span>
-              <span className="h-1 w-1 rounded-full bg-white/30" />
-              <span>Monthly priorities</span>
-              <span className="h-1 w-1 rounded-full bg-white/30" />
-              <span>Hands-on execution</span>
-            </div>
-          </div>
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href={BOOK_URL}
+            className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-white shadow-[0_8px_30px_oklch(0.5_0.22_290_/_0.45)] transition hover:opacity-90"
+            style={{
+              background:
+                "linear-gradient(135deg, oklch(0.55 0.22 290), oklch(0.45 0.20 270))",
+            }}
+          >
+            Book a fit call <ArrowRight className="h-4 w-4" />
+          </a>
+          <a
+            href={INCLUDED_URL}
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 backdrop-blur px-7 py-3.5 text-sm font-medium text-white hover:bg-white/10 transition"
+          >
+            See what's included
+          </a>
         </div>
       </div>
     </section>
