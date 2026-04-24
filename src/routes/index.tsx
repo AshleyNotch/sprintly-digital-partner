@@ -12,6 +12,7 @@ import {
   Compass,
   Calendar,
   Mail,
+  User,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -51,6 +52,11 @@ function Nav() {
 }
 
 function Hero() {
+  const avatars = [
+    "https://i.pravatar.cc/64?img=12",
+    "https://i.pravatar.cc/64?img=32",
+    "https://i.pravatar.cc/64?img=47",
+  ];
   return (
     <section id="top" className="relative overflow-hidden">
       <div
@@ -60,38 +66,53 @@ function Hero() {
       />
       <div
         aria-hidden
-        className="absolute -top-32 -right-32 -z-10 h-96 w-96 rounded-full opacity-30 blur-3xl"
+        className="absolute -top-32 left-1/2 -translate-x-1/2 -z-10 h-[28rem] w-[28rem] rounded-full opacity-25 blur-3xl"
         style={{ background: "var(--gradient-accent)" }}
       />
-      <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-28 md:pb-32">
-        <div className="inline-flex items-center gap-2 rounded-full border border-[var(--hairline)] bg-card px-3 py-1 text-xs text-[var(--ink-soft)]">
-          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-          Monthly digital partner — taking on a few new clients
+      <div className="mx-auto max-w-5xl px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center flex flex-col items-center">
+        <div className="inline-flex items-center gap-3 rounded-full border border-[var(--hairline)] bg-card px-3 py-1.5 text-xs md:text-sm text-[var(--ink-soft)] shadow-[var(--shadow-soft)]">
+          <div className="flex -space-x-2">
+            {avatars.map((src) => (
+              <img
+                key={src}
+                src={src}
+                alt=""
+                className="h-6 w-6 rounded-full border-2 border-card object-cover"
+              />
+            ))}
+          </div>
+          <span>Trusted by owner-led businesses</span>
         </div>
-        <h1 className="mt-6 max-w-4xl text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-foreground leading-[1.05]">
-          For founders who are great at the business,
-          <span className="text-accent"> but don't have time for the internet.</span>
+        <h1 className="mt-7 max-w-4xl text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-foreground leading-[1.05]">
+          For founders who are great at the business,{" "}
+          <span className="inline-block align-middle">
+            <span role="img" aria-label="briefcase">💼</span>
+          </span>{" "}
+          but don't have time for the internet.{" "}
+          <span className="inline-block align-middle">
+            <span role="img" aria-label="globe">🌐</span>
+          </span>
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-[var(--ink-soft)] leading-relaxed">
+        <p className="mt-6 max-w-2xl text-base md:text-lg text-[var(--ink-soft)] leading-relaxed">
           Sprrintly is your monthly digital partner. I help owner-led businesses improve their
           website, sharpen their online presence, build better funnels, and keep the important
           digital work moving — without you having to hire a full team.
         </p>
-        <div className="mt-8 flex flex-wrap items-center gap-3">
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <a
             href={BOOK_URL}
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground hover:opacity-90 transition shadow-[var(--shadow-soft)]"
+            className="inline-flex items-center gap-2 rounded-full bg-[var(--surface-deep)] px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition shadow-[var(--shadow-soft)]"
           >
-            Book a fit call <ArrowRight className="h-4 w-4" />
+            <User className="h-4 w-4" /> Book a fit call
           </a>
           <a
             href={INCLUDED_URL}
-            className="inline-flex items-center gap-2 rounded-full border border-[var(--hairline)] bg-card px-6 py-3.5 text-sm font-medium text-foreground hover:bg-[var(--surface-warm)] transition"
+            className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-accent-foreground hover:opacity-90 transition shadow-[var(--shadow-soft)]"
           >
-            See what's included
+            <Sparkles className="h-4 w-4" /> See what's included
           </a>
         </div>
-        <p className="mt-4 text-sm text-[var(--ink-soft)]">
+        <p className="mt-5 text-sm text-[var(--ink-soft)]">
           Monthly from <span className="text-foreground font-medium">$1,495</span>, or{" "}
           <span className="text-foreground font-medium">$1,195/month</span> on a 3-month commitment.
         </p>
