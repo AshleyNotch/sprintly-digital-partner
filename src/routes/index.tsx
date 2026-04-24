@@ -575,7 +575,7 @@ function Footer() {
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased selection:bg-accent/25">
-      <Nav />
+      
       <main>
         <Hero />
         <Credibility />
