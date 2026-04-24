@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.webp";
 import {
   ArrowRight,
   Check,
