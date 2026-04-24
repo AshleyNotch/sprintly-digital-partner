@@ -104,10 +104,10 @@ function Hero() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <a
             href={BOOK_URL}
-            className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-white shadow-[0_8px_30px_oklch(0.5_0.22_290_/_0.45)] transition hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-white shadow-[0_8px_30px_oklch(0.6_0.22_25_/_0.45)] ring-1 ring-white/20 transition hover:opacity-90"
             style={{
               background:
-                "linear-gradient(135deg, oklch(0.55 0.22 290), oklch(0.45 0.20 270))",
+                "linear-gradient(135deg, oklch(0.78 0.16 30), oklch(0.62 0.22 5) 55%, oklch(0.50 0.20 320))",
             }}
           >
             Book a fit call <ArrowRight className="h-4 w-4" />
