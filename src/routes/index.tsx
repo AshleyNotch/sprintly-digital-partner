@@ -53,7 +53,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="px-4 sm:px-6 pt-6">
+    <section id="top" className="px-4 pt-6 sm:px-0 py-0">
       <div
         className="relative overflow-hidden rounded-[28px] md:rounded-[36px] mx-auto max-w-7xl text-white"
         style={{
